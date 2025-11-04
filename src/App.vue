@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-    <!-- <AuthLayout/> -->
-     <DashboardLayout/>
+    <AuthLayout/>
+     <!-- <DashboardLayout/> -->
 </template>
 
 <style >
