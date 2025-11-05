@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: DashboardWallet,
+    name: "DashboardWallet",
 };
 </script>
 

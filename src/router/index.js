@@ -3,6 +3,8 @@ import Reset from "@/components/resetComps/reset.vue";
 import SignUp from "@/components/signUpComps/signUp.vue";
 import DashboardLayout from "@/layouts/dashboardLayout/dashboardLayout.vue";
 import DashboardHome from "@/components/dashboardComps/dashboardHome.vue";
+import DashboardUsers from "@/components/dashboardComps/dashboardUsers.vue";
+import DashboardWallet from "@/components/dashboardComps/dasboardWallet.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -11,8 +13,9 @@ const routes = [
   { path: "/login", component: Login },
   { path: "/resetPassword", component: Reset },
   // { path: "/dashboard", component: DashboardLayout},
-    {path: "/home", component: DashboardHome}
-
+    {path: "/home", component: DashboardHome},
+    {path: "/users", component: DashboardUsers},
+    {path: "/cards", component: DashboardWallet},
 ];
 
 const router = createRouter({

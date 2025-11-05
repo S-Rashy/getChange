@@ -15,7 +15,7 @@ export default {
 <template>
   <div>
     <DashboardHeader />
-    <div>
+    <div class="flex">
         <DashboardSidebar/>
         <RouterView/>
     </div>
