@@ -71,7 +71,7 @@ export default {
         >Forgot Password?</router-link
       >
       <button
-        class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white"
+        class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200""
         type="submit"
       >
         Sign in

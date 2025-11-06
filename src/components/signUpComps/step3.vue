@@ -18,12 +18,14 @@ export default {
       {{ email || "your email address" }}. Complete registration by
       following the link.
     </p>
-    <button
-      class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200"
-      type="button"
-    >
-      Dashboard
-    </button>
+    <RouterLink to="/">
+      <button
+        class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200"
+        type="button"
+      >
+        Dashboard
+      </button>
+    </RouterLink>
   </main>
 </template>
 

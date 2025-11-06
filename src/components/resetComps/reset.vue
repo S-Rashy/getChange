@@ -23,12 +23,12 @@ export default {
           <img src="../../assets/@.png" alt="" class="w-[14px] h-[14px]" />
         </div>
       </div>
-    </section>
+    </section> 
 
    
     <div class="flex justify-between items-center mt-5">
         <router-link to="/auth/login" class="text-[#2BDA53] text-[14px]">Back to Login</router-link>
-      <button class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white">Recover</button>
+      <button class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200" >Recover</button>
     </div>
   </form>
 </template>
