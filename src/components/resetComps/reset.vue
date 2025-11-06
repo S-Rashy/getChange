@@ -27,7 +27,7 @@ export default {
 
    
     <div class="flex justify-between items-center mt-5">
-        <router-link to="/login" class="text-[#2BDA53] text-[14px]">Back to Login</router-link>
+        <router-link to="/auth/login" class="text-[#2BDA53] text-[14px]">Back to Login</router-link>
       <button class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white">Recover</button>
     </div>
   </form>

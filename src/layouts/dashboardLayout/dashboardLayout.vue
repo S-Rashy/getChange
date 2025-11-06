@@ -6,18 +6,33 @@ export default {
   name: "dashboardLayout",
   components: {
     DashboardHeader,
-    DashboardSidebar
+    DashboardSidebar,
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem("userData");
+      this.$router.push({ name: "auth-page" });
+    },
   },
 };
 </script>
 
-
 <template>
-  <div>
+  <div class="bg-gray-200">
     <DashboardHeader />
+
     <div class="flex">
-        <DashboardSidebar/>
-        <RouterView/>
+      <DashboardSidebar />
+      <div class="p-5">
+        <RouterView />
+      </div>
+
+      <button
+        @click="logout"
+        class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white mx-80 my-50"
+      >
+        Log out
+      </button>
     </div>
   </div>
 </template>

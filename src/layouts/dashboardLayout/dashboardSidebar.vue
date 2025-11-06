@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       routes: [
-        { name: "Home", path: "/home", icon: HomeIcon },
+        { name: "Home", path: "/", icon: HomeIcon },
         { name: "Users", path: "/users", icon: UsersIcon },
         { name: "Cards", path: "/cards", icon: CardsIcon },
       ],
@@ -27,14 +27,9 @@ export default {
 </script>
 
 <template>
-  <aside class="w-15 h-[calc(100vh-60px)] py-10 border">
+  <aside class="w-15 h-[calc(100vh-60px)] py-10 bg-white">
     <div class="h-[50%] flex flex-col justify-between items-center">
-      <!-- <img src="../../assets/home.svg" alt="home">
-        <img src="../../assets/users.png" alt="Users">
-        <img src="../../assets/cards.png" alt="Cards"> -->
-      <!-- <HomeIcon/>
-        <UsersIcon/>
-        <CardsIcon/> -->
+     
       <RouterLink v-for="route in routes" :key="route.path" :to="route.path" @click="isActive(route.path)" class="py-3 px-4 border-l-4 border-transparent" :class="{ 'border-l-[#2BDA53] ': isActive(route.path) }">
         <component class="size-6" :class="isActive(route.path) ? 'text-[#2BDA53]' : 'text-[#013C61]'" :is="route.icon" />
       </RouterLink>

@@ -13,7 +13,8 @@ export default {
 
 <template>
     <!-- <AuthLayout/> -->
-     <DashboardLayout/>
+     <!-- <DashboardLayout/> -->
+      <RouterView/>
 </template>
 
 <style >

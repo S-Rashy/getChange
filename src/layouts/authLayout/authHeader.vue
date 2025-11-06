@@ -13,9 +13,9 @@ import ResetHeader from '@/components/resetComps/resetHeader.vue';
 </script>
 
 <template>
-      <SignUpHeader v-if="$route.path === '/signup'" />
-        <LoginHeader v-else-if="$route.path === '/login'" />
-        <ResetHeader v-else-if="$route.path === '/resetPassword'" />
+      <SignUpHeader v-if="$route.path === '/auth/signup'" />
+        <LoginHeader v-else-if="$route.path === '/auth/login'" />
+        <ResetHeader v-else-if="$route.path === '/auth/resetPassword'" />
 </template>
 
 
