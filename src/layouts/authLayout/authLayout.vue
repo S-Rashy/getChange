@@ -34,9 +34,9 @@ export default {
 
     <section class="flex flex-col justify-center w-[60%] h-screen pt-10">
       <div class="flex flex-col gap-5 ml-30">
-        <AuthHeader v-if="signUPStep !== 3"/>
+        <AuthHeader v-if="signUPStep !== 3" />
 
-        <RouterView @step="updateStep"/>
+        <RouterView @step="updateStep" />
       </div>
       <AuthFooter />
     </section>

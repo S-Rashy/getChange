@@ -1,5 +1,6 @@
 <script>
 import DashboardHeader from "./dashboardHeader.vue";
+import DashboardPhone from "./dashboardPhone.vue";
 import DashboardSidebar from "./dashboardSidebar.vue";
 
 export default {
@@ -7,6 +8,7 @@ export default {
   components: {
     DashboardHeader,
     DashboardSidebar,
+    DashboardPhone
   },
   methods: {
     logout() {
@@ -21,18 +23,19 @@ export default {
   <div class="bg-gray-200">
     <DashboardHeader />
 
-    <div class="flex">
+    <div class="flex justify-between pr-5">
       <DashboardSidebar />
       <div class="p-5">
         <RouterView />
-      </div>
+    </div>
+    <DashboardPhone/>
 
-      <button
+      <!-- <button
         @click="logout"
         class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white mx-80 my-50 hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200""
       >
         Log out
-      </button>
+      </button> -->
     </div>
   </div>
 </template>

@@ -18,12 +18,12 @@ export default {
 </script>
 
 <template>
-  <main class="h-15 w-full flex justify-between items-center px-6 bg-white">
+  <main class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white">
     <img src="../../assets/logo.svg" alt="Logo" />
 
     <div class="flex justify-between items-center gap-4">
       <div class="w-10 h-10 rounded-[50%] bg-[#6A7E8A]"></div>
-      <p class="text-[#013C61] font-medium">Hi, {{ userEmail }}</p>
+      <p class="text-[#013C61] font-medium">Hi, {{ userEmail || "User" }}</p>
       <svg
         width="10"
         height="6"
