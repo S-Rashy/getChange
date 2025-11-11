@@ -1,9 +1,18 @@
 <script>
-export default {};
+import Gbutton from '@/components/slots/Gbutton.vue';
+import Wbutton from '@/components/slots/Wbutton.vue';
+
+export default {
+    name: "DashboardPhone",
+    components: {
+        Gbutton,
+        Wbutton
+    }
+};
 </script>
 
 <template>
-  <main class="h-[calc(100vh-60px)]">
+  <main class="max-h-[calc(100vh-60px)] shadow-sm bg-white">
     <div
       class="bg-[#013C61] h-50 w-60 text-white text-[12px] p-4 flex flex-col justify-between rounded-[5px]"
     >
@@ -15,10 +24,10 @@ export default {};
         <p>● IOU Voucher</p>
       </div>
 
-      <h1 class="text-[30px]">08012345678</h1>
+      <h1 class="text-[30px] text-center">08012345678</h1>
     </div>
 
-    <div class="grid grid-cols-4">
+    <div class="grid grid-cols-4 w-60">
       <p class="h-10 flex items-center justify-center bg-[#2BDA5333]">c</p>
       <p class="h-10 flex items-center justify-center bg-[#2BDA5333]"><</p>
       <p class="h-10 flex items-center justify-center bg-[#2BDA5333]">></p>
@@ -67,6 +76,11 @@ export default {};
       <p class="h-10 flex items-center justify-center">8</p>
       <p class="h-10 flex items-center justify-center">9</p>
       <p class="h-10 flex items-center justify-center bg-[#2BDA5333]">0</p>
+    </div>
+
+    <div class="flex flex-col gap-4 pb-2 mt-5 w-60 items-center">
+        <Wbutton class="w-45"> Query </Wbutton>
+        <Gbutton class="w-45"> Generate </Gbutton>
     </div>
   </main>
 </template>
