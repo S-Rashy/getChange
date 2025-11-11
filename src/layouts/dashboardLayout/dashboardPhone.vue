@@ -17,9 +17,12 @@ export default {
       class="bg-[#013C61] h-50 w-60 text-white text-[12px] p-4 flex flex-col justify-between rounded-[5px]"
     >
       <p>GETCHANGE WIDGET</p>
-      <p class="">Amount</p>
+      <div class="flex text-[#FFFFFF80]">
+        <p class="mt-3">Amount</p>
+        <input type="text" class=" border-b ml-2 mb-2">
+      </div>
 
-      <div class="flex justify-end gap-4">
+      <div class="flex justify-end gap-4 text-[#FFFFFF80]">
         <p>● Airtime</p>
         <p>● IOU Voucher</p>
       </div>

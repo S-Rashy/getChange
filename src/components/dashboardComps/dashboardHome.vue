@@ -37,12 +37,17 @@ export default {
       this.showModal = true;
       this.showHistory = true;
     },
+    closeModal(){
+      this.showModal = false
+      this.showHistory = false
+      this.showTopUp = false
+    }
   },
 };
 </script>
 
 <template>
-  <main class="border flex justify-between w-300 text-[#013C61]">
+  <main class="flex justify-between w-300 text-[#013C61]">
     <section class="mt-10 mx-auto">
       <div
         class="bg-white p-6 rounded-sm shadow-sm w-210 flex justify-between items-center h-14 text-[#013C61]"
@@ -120,9 +125,9 @@ export default {
     <DashboardPhone />
   </main>
   
-  <TopUpModal v-show="showModal && showTopUp"/> 
+  <TopUpModal v-if="showModal && showTopUp" @close="closeModal"/> 
 
-  <HistoryModal v-show="showModal && showHistory"/>
+  <HistoryModal v-if="showModal && showHistory" @close="closeModal"/>
 </template>
 
 <style lang="scss" scoped></style>

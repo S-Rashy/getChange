@@ -34,6 +34,7 @@ export default {
         <component class="size-6" :class="isActive(route.path) ? 'text-[#2BDA53]' : 'text-[#013C61]'" :is="route.icon" />
       </RouterLink>
     </div>
+    
   </aside>
 </template>
 

@@ -62,29 +62,29 @@ export default {
   <div class="w-full overflow-hidden">
     <table class="min-w-full text-left text-sm">
       <thead>
-        <tr
-          class=" text-[#013C61] text-xs font-light"
-        >
-          <th class="py-3 px-6">#</th>
-          <th class="py-3 px-6">DESCRIPTION</th>
-          <th class="py-3 px-6">DATE</th>
-          <th class="py-3 px-6">TIME</th>
-          <th class="py-3 px-6">STAFF</th>
-          <th class="py-3 px-6">AMOUNT</th>
+        <tr class="text-[#013C61] text-xs font-light">
+          <th class="py-3 px-4">#</th>
+          <th class="py-3 px-4">DESCRIPTION</th>
+          <th class="py-3 px-4">DATE</th>
+          <th class="py-3 px-4">TIME</th>
+          <th class="py-3 px-4">STAFF</th>
+          <th class="py-3 px-4">AMOUNT</th>
         </tr>
       </thead>
       <tbody>
         <tr
           v-for="transaction in transactions"
           :key="transaction.id"
-          class="border-b border-gray-100 bg-white hover:bg-gray-50 transition-colors rounded-sm"
+          class="bg-white"
         >
-          <td class="rounded-l-md">{{ transaction.id }} </td>
-          <td class=" cursor-pointer hover:underline"> {{ transaction.description }} </td>
+          <td class="rounded-l-md">{{ transaction.id }}</td>
+          <td class="cursor-pointer hover:underline">
+            {{ transaction.description }}
+          </td>
           <td class="">{{ transaction.date }}</td>
           <td class="">{{ transaction.time }}</td>
           <td class="">{{ transaction.staff }}</td>
-          <td class="rounded-r-md">{{ transaction.amount }} </td>
+          <td class="rounded-r-md">{{ transaction.amount }}</td>
         </tr>
       </tbody>
     </table>
@@ -93,8 +93,8 @@ export default {
 
 <style scoped>
 td {
-    color: #6A7E8A;
-    padding: 12px 16px;
+  color: #6a7e8a;
+  padding: 12px 16px;
 }
 table {
   border-collapse: separate;
