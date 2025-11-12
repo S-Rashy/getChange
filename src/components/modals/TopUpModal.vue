@@ -52,12 +52,12 @@ import Modal from '../slots/modal.vue';
             <p class="absolute bottom-45">Back</p>
             <h4 class="text-[#013C61] text-[24px] font-semibold">Kindly enter customer unique IOU code to validate their voucher</h4>
             <div class="space-x-3">
-                <input type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input @change="confirmed" type="text"class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input @change="confirmed" type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
             </div>
 
             <p @click="confirmed" class="text-xs text-red-500">Error: code not associated with customer's phone number</p>

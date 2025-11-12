@@ -1,13 +1,25 @@
 <script>
-import Gbutton from '@/components/slots/Gbutton.vue';
-import Wbutton from '@/components/slots/Wbutton.vue';
+import Gbutton from "@/components/slots/Gbutton.vue";
+import Wbutton from "@/components/slots/Wbutton.vue";
 
 export default {
-    name: "DashboardPhone",
-    components: {
-        Gbutton,
-        Wbutton
+  name: "DashboardPhone",
+  components: {
+    Gbutton,
+    Wbutton,
+  },
+  data(){
+    return{
+      amountInput: 0
+
     }
+  },
+  methods: {
+    showModal(){
+      this.$emit('show-modal')
+      this.$emit('amount-input', this.amountInput)
+    },
+  },
 };
 </script>
 
@@ -19,7 +31,7 @@ export default {
       <p>GETCHANGE WIDGET</p>
       <div class="flex text-[#FFFFFF80]">
         <p class="mt-3">Amount</p>
-        <input type="text" class=" border-b ml-2 mb-2">
+        <input type="text" class="border-b ml-2 mb-2" v-model="amountInput"/>
       </div>
 
       <div class="flex justify-end gap-4 text-[#FFFFFF80]">
@@ -82,8 +94,8 @@ export default {
     </div>
 
     <div class="flex flex-col gap-4 pb-2 mt-5 w-60 items-center">
-        <Wbutton class="w-45"> Query </Wbutton>
-        <Gbutton class="w-45"> Generate </Gbutton>
+      <Wbutton class="w-45"> Query </Wbutton>
+      <Gbutton @click="showModal" class="w-45"> Generate </Gbutton>
     </div>
   </main>
 </template>

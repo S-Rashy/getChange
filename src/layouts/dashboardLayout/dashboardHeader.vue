@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <main class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white">
+  <main class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white fixed">
     <img src="../../assets/logo.svg" alt="Logo" />
 
     <div class="flex justify-between items-center gap-4">

@@ -20,7 +20,7 @@ export default {
 
     <div class="flex">
       <DashboardSidebar />
-      <div >
+      <div class="pt-12 pl-12">
         <RouterView />
     </div>
 

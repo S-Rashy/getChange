@@ -6,6 +6,7 @@ import HomeTable from "./homeTable.vue";
 import Modal from "../slots/modal.vue";
 import TopUpModal from "../modals/TopUpModal.vue";
 import HistoryModal from "../modals/HistoryModal.vue";
+import AirtimeModal from "../modals/AirtimeModal.vue";
 
 export default {
   name: "DashboardHome",
@@ -16,18 +17,21 @@ export default {
     HomeTable,
     Modal,
     TopUpModal,
-    HistoryModal
+    HistoryModal,
+    AirtimeModal,
   },
   data() {
     return {
       showModal: false,
       showTopUp: false,
       showHistory: false,
+      showAirtime: false,
+      amountInput: 0
     };
   },
   methods: {
-    modalOn() {
-      this.showModal = true;
+    saveAmount(amountInput){
+      this.amountInput = amountInput
     },
     topUpModal() {
       this.showModal = true;
@@ -37,11 +41,16 @@ export default {
       this.showModal = true;
       this.showHistory = true;
     },
-    closeModal(){
-      this.showModal = false
-      this.showHistory = false
-      this.showTopUp = false
-    }
+    closeModal() {
+      this.showModal = false;
+      this.showHistory = false;
+      this.showTopUp = false;
+      this.showAirtime = false;
+    },
+    airtimeModal() {
+      this.showModal = true;
+      this.showAirtime = true;
+    },
   },
 };
 </script>
@@ -73,7 +82,8 @@ export default {
         <div class="flex justify-between mt-6 mx-4">
           <h5 class="font-semibold">Recent Activities</h5>
           <p class="flex items-center gap-2 text-[#013C61]">
-            <span class="border border-[#013C611A] px-1 rounded-xs">1</span> of 8
+            <span class="border border-[#013C611A] px-1 rounded-xs">1</span> of
+            8
             <svg
               width="18"
               height="18"
@@ -122,12 +132,14 @@ export default {
         <HomeTable />
       </section>
     </section>
-    <DashboardPhone />
+    <DashboardPhone @show-modal="airtimeModal" @amount-input="saveAmount" />
   </main>
-  
-  <TopUpModal v-if="showModal && showTopUp" @close="closeModal"/> 
 
-  <HistoryModal v-if="showModal && showHistory" @close="closeModal"/>
+  <TopUpModal v-if="showModal && showTopUp" @close="closeModal" />
+
+  <HistoryModal v-if="showModal && showHistory" @close="closeModal" />
+
+  <AirtimeModal v-if="showModal && showAirtime" @close="closeModal" :amountInput="amountInput" />
 </template>
 
 <style lang="scss" scoped></style>
