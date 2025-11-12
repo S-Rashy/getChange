@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <Modal class="h-[30px]"> df bnmghj{{ amountInput }}</Modal>
+    <Modal class="h-[30px]"> {{ amountInput }}</Modal>
   
 </template>
 
