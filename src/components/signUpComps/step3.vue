@@ -1,6 +1,11 @@
 <script>
+import Gbutton from "../slots/Gbutton.vue";
+
 export default {
   name: "Step3",
+  components: {
+    Gbutton,
+  },
   props: {
     email: String,
   },
@@ -15,16 +20,11 @@ export default {
     </h4>
     <p class="text-[#6A7E8A]">
       We just mailed you a confirmation link to
-      {{ email || "your email address" }}. Complete registration by
-      following the link.
+      {{ email || "your email address" }}. Complete registration by following
+      the link.
     </p>
-    <RouterLink to="/">
-      <button
-        class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200"
-        type="button"
-      >
-        Dashboard
-      </button>
+    <RouterLink to="/" class="hover:underline">
+      <Gbutton> Dashboard </Gbutton>
     </RouterLink>
   </main>
 </template>

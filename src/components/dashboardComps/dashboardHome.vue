@@ -73,7 +73,7 @@ export default {
         <div class="flex justify-between mt-6 mx-4">
           <h5 class="font-semibold">Recent Activities</h5>
           <p class="flex items-center gap-2 text-[#013C61]">
-            <span class="font-medium">1</span> of 8
+            <span class="border border-[#013C611A] px-1 rounded-xs">1</span> of 8
             <svg
               width="18"
               height="18"

@@ -2,12 +2,14 @@
 import HomeIcon from "../../assets/icons/homeIcon.vue";
 import UsersIcon from "../../assets/icons/usersIcon.vue";
 import CardsIcon from "../../assets/icons/cardsIcon.vue";
+import Gbutton from "@/components/slots/Gbutton.vue";
 export default {
   name: "dashboardSidebar",
   components: {
     HomeIcon,
     UsersIcon,
     CardsIcon,
+    Gbutton
   },
   data() {
     return {
@@ -21,20 +23,27 @@ export default {
   methods: {
     isActive(path){
         return this.$route.path === path;
-    }
+    },
+    logout() {
+      localStorage.removeItem("userData");
+      this.$router.push({ name: "auth-page" });
+    },
+  
   },
 };
 </script>
 
 <template>
-  <aside class="w-15 h-[calc(100vh-60px)] py-10 bg-white">
+  <aside class="w-15 h-[calc(100vh-60px)] py-10 bg-white flex flex-col justify-between">
     <div class="h-[50%] flex flex-col justify-between items-center">
      
       <RouterLink v-for="route in routes" :key="route.path" :to="route.path" @click="isActive(route.path)" class="py-3 px-4 border-l-4 border-transparent" :class="{ 'border-l-[#2BDA53] ': isActive(route.path) }">
         <component class="size-6" :class="isActive(route.path) ? 'text-[#2BDA53]' : 'text-[#013C61]'" :is="route.icon" />
       </RouterLink>
     </div>
+
     
+    <Gbutton @click="logout" class="w-[60px] text-sm p-1 text-red-500"> Logout</Gbutton>
   </aside>
 </template>
 

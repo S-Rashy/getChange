@@ -10,17 +10,12 @@ export default {
     DashboardSidebar,
     DashboardPhone
   },
-  methods: {
-    logout() {
-      localStorage.removeItem("userData");
-      this.$router.push({ name: "auth-page" });
-    },
-  },
+ 
 };
 </script>
 
 <template>
-  <div class="bg-gray-200">
+  <div class="bg-[#f6f8f8]">
     <DashboardHeader />
 
     <div class="flex">

@@ -1,7 +1,12 @@
 <script>
+import Gbutton from '../slots/Gbutton.vue';
+
 export default {
   name: "Step2",
   emits: ["nextstep"],
+  components: {
+    Gbutton
+  },
   methods: {
     handleNextStep() {
       this.$emit("nextstep");
@@ -69,13 +74,11 @@ export default {
       </div>
     </section>
     <div class="flex justify-end">
-      <button
-        class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200"
-        type="button"
+      <Gbutton
         @click="handleNextStep"
       >
         Finish
-      </button>
+      </Gbutton>
     </div>
   </form>
 </template>

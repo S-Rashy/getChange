@@ -19,7 +19,7 @@ export default {
 
 <style >
 body{
-  font-family:  sans-serif;
+  font-family: ;
 
 }
 </style>

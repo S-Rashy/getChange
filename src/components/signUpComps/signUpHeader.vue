@@ -10,7 +10,7 @@ export default {
       Create your free account
     </h4>
     <p class="text-[#013C61]">
-      Already registered? <router-link to="/auth/login" class="text-[#2BDA53]">Sign in</router-link>
+      Already registered? <router-link to="/auth/login" class="text-[#2BDA53] hover:underline">Sign in</router-link>
     </p>
   </div>
 </template>

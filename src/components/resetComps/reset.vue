@@ -1,6 +1,11 @@
 <script>
+import Gbutton from '../slots/Gbutton.vue';
+
 export default {
   name: "reset",
+  components: {
+    Gbutton
+  },
 };
 </script>
 
@@ -27,8 +32,8 @@ export default {
 
    
     <div class="flex justify-between items-center mt-5">
-        <router-link to="/auth/login" class="text-[#2BDA53] text-[14px]">Back to Login</router-link>
-      <button class="w-35 h-10 bg-[#2BDA53] cursor-pointer text-white hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200" >Recover</button>
+        <router-link to="/auth/login" class="text-[#2BDA53] text-[14px] hover:underline">Back to Login</router-link>
+      <Gbutton >Recover</Gbutton>
     </div>
   </form>
 </template>

@@ -5,10 +5,10 @@
 </script>
 
 <template>
-    <div  class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 flex items-center justify-center cursor-pointer text-white transition-all duration-200">
+    <button  class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 cursor-pointer text-white transition-all duration-300">
         <slot></slot>
 
-    </div>
+    </button>
 
 </template>
 

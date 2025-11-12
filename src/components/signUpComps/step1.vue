@@ -1,7 +1,12 @@
 <script>
+import Gbutton from "../slots/Gbutton.vue";
+
 export default {
   name: "Step1",
   emits: ["nextstep", "email-input"],
+  components: {
+    Gbutton,
+  },
   data() {
     return {
       showPassword: false,
@@ -89,13 +94,7 @@ export default {
       </div>
     </section>
     <div class="flex justify-end">
-      <button
-        class="w-35 h-10 bg-[#2BDA53] hover:bg-[#25C248] hover:shadow-lg hover:scale-105 mt-5 cursor-pointer text-white transition-all duration-200"
-        type="button"
-        @click="handleNextStep"
-      >
-        Continue
-      </button>
+      <Gbutton @click="handleNextStep"> Continue </Gbutton>
     </div>
   </form>
 </template>
