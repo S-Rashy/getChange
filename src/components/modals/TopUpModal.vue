@@ -65,7 +65,7 @@ import Modal from '../slots/modal.vue';
     </section>
 
     <section v-show="confirmedPage"  class=" flex flex-col items-center text-center gap-8 mt-10">
-        <h4 class="text-[#013C61] text-[24px] font-semibold"> IOU Voucher reedemed successfully</h4>
+        <h4 class="text-[#013C61] text-[26px] font-semibold"> IOU Voucher reedemed successfully</h4>
         <img class="w-20" src="../../assets/verify.svg" alt="">
     </section>
     </Modal>
