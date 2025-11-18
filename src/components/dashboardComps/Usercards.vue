@@ -1,25 +1,26 @@
 <script>
 export default {
   name: "userCards",
+  props: {'cards': Array,},
   data() {
     return {
-      cards: [
-        {
-          num: 1234567890123456,
-          name: "Joshua Bakare",
-          date: "03/25",
-        },
-        {
-          num: 1234567890123456,
-          name: "Joshua Bakare",
-          date: "03/25",
-        },
-        {
-          num: 1234567890123456,
-          name: "Joshua Bakare",
-          date: "03/25",
-        },
-      ],
+    //   cards: [
+    //     {
+    //       num: 1234567890123456,
+    //       name: "Joshua Bakare",
+    //       date: "03/25",
+    //     },
+    //     {
+    //       num: 1234567890123456,
+    //       name: "Joshua Bakare",
+    //       date: "03/25",
+    //     },
+    //     {
+    //       num: 1234567890123456,
+    //       name: "Joshua Bakare",
+    //       date: "03/25",
+    //     },
+    //   ],
     };
   },
  methods: {
@@ -35,7 +36,7 @@ export default {
   <main class="flex gap-15 flex-wrap mt-8">
     <div
       v-for="card in cards"
-      :key="card.index"
+      :key="index"
       class="bg-white w-90 h-55 space-y-26 p-6 radius-[5px]"
     >
       <div class="flex justify-between ">

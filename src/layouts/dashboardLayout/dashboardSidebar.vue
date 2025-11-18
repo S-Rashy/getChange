@@ -9,7 +9,7 @@ export default {
     HomeIcon,
     UsersIcon,
     CardsIcon,
-    Gbutton
+    Gbutton,
   },
   data() {
     return {
@@ -21,29 +21,42 @@ export default {
     };
   },
   methods: {
-    isActive(path){
-        return this.$route.path === path;
+    isActive(path) {
+      return this.$route.path === path;
     },
     logout() {
       localStorage.removeItem("userData");
       this.$router.push({ name: "auth-page" });
     },
-  
   },
 };
 </script>
 
 <template>
   <main class="h-screen fixed flex items-end">
-    <aside class="w-15 h-[calc(100vh-60px)] py-10 bg-white flex flex-col justify-between">
+    <aside
+      class="w-15 h-[calc(100vh-60px)] py-10 bg-white flex flex-col justify-between"
+    >
       <div class="h-[50%] flex flex-col justify-between items-center">
-    
-        <RouterLink v-for="route in routes" :key="route.path" :to="route.path" @click="isActive(route.path)" class="py-3 px-4 border-l-4 border-transparent" :class="{ 'border-l-[#2BDA53] ': isActive(route.path) }">
-          <component class="size-6" :class="isActive(route.path) ? 'text-[#2BDA53]' : 'text-[#013C61]'" :is="route.icon" />
+        <RouterLink
+          v-for="route in routes"
+          :key="route.path"
+          :to="route.path"
+          @click="isActive(route.path)"
+          class="py-3 px-4 border-l-4 border-transparent"
+          :class="{ 'border-l-[#2BDA53] ': isActive(route.path) }"
+        >
+          <component
+            class="size-6"
+            :class="isActive(route.path) ? 'text-[#2BDA53]' : 'text-[#013C61]'"
+            :is="route.icon"
+          />
         </RouterLink>
       </div>
-    
-      <Gbutton @click="logout" class="w-[55px] mx-auto text-sm p-1 rounded-xl"> Logout</Gbutton>
+
+      <Gbutton @click="logout" class="w-[55px] mx-auto text-sm p-1 rounded-xl">
+        Logout</Gbutton
+      >
     </aside>
   </main>
 </template>

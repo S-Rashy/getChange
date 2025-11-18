@@ -7,6 +7,7 @@ import Modal from "../slots/modal.vue";
 import TopUpModal from "../modals/TopUpModal.vue";
 import HistoryModal from "../modals/HistoryModal.vue";
 import AirtimeModal from "../modals/AirtimeModal.vue";
+import SettingsLayout from "@/layouts/dashboardLayout/SettingsLayout.vue";
 
 export default {
   name: "DashboardHome",
@@ -19,6 +20,7 @@ export default {
     TopUpModal,
     HistoryModal,
     AirtimeModal,
+    SettingsLayout
   },
   data() {
     return {
@@ -140,6 +142,8 @@ export default {
   <HistoryModal v-if="showModal && showHistory" @close="closeModal" />
 
   <AirtimeModal v-if="showModal && showAirtime" @close="closeModal" :amountInput="amountInput" />
+
+  <SettingsLayout/>
 </template>
 
 <style lang="scss" scoped></style>

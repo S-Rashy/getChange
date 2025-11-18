@@ -1,19 +1,37 @@
 <script>
-import Gbutton from '../slots/Gbutton.vue';
-import Usercards from './Usercards.vue';
+import AddCardModal from "../modals/AddCardModal.vue";
+import Gbutton from "../slots/Gbutton.vue";
+import Usercards from "./Usercards.vue";
 
 export default {
   name: "DashboardWallet",
   components: {
     Usercards,
-    Gbutton
+    Gbutton,
+    AddCardModal,
   },
   data() {
     return {
-     
+      showModal: false,
+       cards: [
+        { num: 1234567890123456, name: "Joshua Bakare", date: "03/25" },
+        { num: 2345678901234567, name: "Mary Smith", date: "06/24" },
+        { num: 3456789012345678, name: "John Doe", date: "09/26" },
+      ],
     };
   },
-
+  methods: {
+    openModal() {
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
+    },
+    addCard(newCard) {
+      this.cards.push(newCard);
+      this.closeModal(); 
+    },
+  },
 };
 </script>
 
@@ -21,12 +39,13 @@ export default {
   <main class="p-12 w-full min-h-full flex gap-25">
     <div class="w-220">
       <h4 class="text-[#013C61] text-[24px] text-semibold">Debit Cards</h4>
-      <Usercards/>
+         <Usercards :cards="cards" />
+
     </div>
 
-    <Gbutton> Add New</Gbutton>
-      
-       
+    <Gbutton @click="openModal"> Add New</Gbutton>
+
+    <AddCardModal v-if="showModal" @close="closeModal" @send-form="addCard"/>
   </main>
 </template>
 

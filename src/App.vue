@@ -18,8 +18,5 @@ export default {
 </template>
 
 <style >
-body{
-  font-family: ;
 
-}
 </style>
