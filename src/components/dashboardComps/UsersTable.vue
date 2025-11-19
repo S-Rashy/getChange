@@ -1,8 +1,15 @@
 <script>
+import DeleteModal from "../modals/DeleteModal.vue";
+
 export default {
+  components: {
+    DeleteModal,
+  },
   data() {
     return {
-        svgColor: "none",
+      svgColor: "none",
+      showModal: false,
+
       users: [
         {
           firstname: "Joshua",
@@ -50,10 +57,16 @@ export default {
     };
   },
   methods: {
-    changeFill(){
-        this.svgColor =  "#2BDA53"
-    }
-  }
+    openModal() {
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
+    },
+    changeFill() {
+      this.svgColor = "#2BDA53";
+    },
+  },
 };
 </script>
 
@@ -73,11 +86,11 @@ export default {
       <tr v-for="user in users" class="bg-white">
         <td class="rounded-l-md">
           <svg
-          @click="changeFill"
+            @click="changeFill"
             width="15"
             height="15"
             viewBox="0 0 15 15"
-             :fill="svgColor"
+            :fill="svgColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
@@ -99,6 +112,8 @@ export default {
         <td>{{ user.role }}</td>
         <td class="rounded-r-md">
           <svg
+            @click="openModal"
+            class="cursor-pointer"
             width="18"
             height="21"
             viewBox="0 0 18 21"
@@ -135,6 +150,7 @@ export default {
       </tr>
     </tbody>
   </table>
+  <DeleteModal v-if="showModal" @close="closeModal" />
 </template>
 
 <style scoped>

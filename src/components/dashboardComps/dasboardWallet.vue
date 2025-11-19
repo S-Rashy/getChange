@@ -15,8 +15,6 @@ export default {
       showModal: false,
        cards: [
         { num: 1234567890123456, name: "Joshua Bakare", date: "03/25" },
-        { num: 2345678901234567, name: "Mary Smith", date: "06/24" },
-        { num: 3456789012345678, name: "John Doe", date: "09/26" },
       ],
     };
   },

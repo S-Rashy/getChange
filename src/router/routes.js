@@ -11,6 +11,8 @@ import Profile from "@/components/SettingsComp/Profile.vue";
 import Password from "@/components/SettingsComp/Password.vue";
 import StoreInfo from "@/components/SettingsComp/StoreInfo.vue";
 import BillingInfo from "@/components/SettingsComp/BillingInfo.vue";
+import InvoiceHistory from "@/components/SettingsComp/InvoiceHistory.vue";
+import History from "@/components/dashboardComps/History.vue";
 
 export default [
   {
@@ -22,16 +24,18 @@ export default [
       { path: "", component: DashboardHome, name: "dashboardHome" },
       { path: "users", component: DashboardUsers, name: "dashboardUsers" },
       { path: "cards", component: DashboardWallet, name: "dashboardWallet" },
+      { path: "history", component: History, name: "walletHistory" },
       {
         path: "settings",
         component: SettingsLayout,
         name: "SettingsLayout",
+        redirect: "/settings/profile",
         children: [
           { path: "profile", component: Profile,  name: "Profile", },
           { path: "password", component: Password, name: "Password", },
           { path: "store-information", component: StoreInfo,  name: "Store-Info" },
           { path: "billing-information", component: BillingInfo, name: "Billing",  },
-          // { name: "Invoice", path: "invoice-history" },
+          { path: "invoice-history", component: InvoiceHistory, name: "Invoice",  },
         ],
       },
     ],

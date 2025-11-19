@@ -12,11 +12,11 @@ export default {
   <div
     class="w-full h-full inset-0 fixed flex items-center justify-center bg-black/30"
   >
-    <div class="bg-white h-95 w-120 py-3 px-10">
-      <div class="w-full flex justify-end mb-5">
+    <div class="bg-white h-59 w-120 py-3 px-12">
+      <div class="w-full flex justify-end mb-4">
         <svg
           @click="closeModal"
-          class="cursor-pointer"
+          class="cursor-pointer hover:color"
           width="22"
           height="22"
           viewBox="0 0 22 22"

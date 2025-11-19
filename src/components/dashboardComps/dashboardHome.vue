@@ -143,7 +143,7 @@ export default {
 
   <AirtimeModal v-if="showModal && showAirtime" @close="closeModal" :amountInput="amountInput" />
 
-  <SettingsLayout/>
+  <!-- <SettingsLayout/> -->
 </template>
 
 <style lang="scss" scoped></style>

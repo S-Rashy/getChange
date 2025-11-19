@@ -24,10 +24,7 @@ export default {
     isActive(path) {
       return this.$route.path === path;
     },
-    logout() {
-      localStorage.removeItem("userData");
-      this.$router.push({ name: "auth-page" });
-    },
+    
   },
 };
 </script>
@@ -54,9 +51,6 @@ export default {
         </RouterLink>
       </div>
 
-      <Gbutton @click="logout" class="w-[55px] mx-auto text-sm p-1 rounded-xl">
-        Logout</Gbutton
-      >
     </aside>
   </main>
 </template>
