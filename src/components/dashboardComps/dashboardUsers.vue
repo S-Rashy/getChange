@@ -48,14 +48,13 @@ export default {
       <div class="w-180 flex gap-6">
         <select name="" id="" class="border px-4 border-[#6A7E8A66]">
           <option value="">Change role</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
+          <option value="">Admin</option>
+          <option value="">staff</option>
         </select>
         <Gbutton>Change </Gbutton>
         <input
           type="text"
-          class="border border-[#6A7E8A66] px-4 w-90"
+          class="border border-[#6A7E8A66] px-4 w-90 outline-none"
           placeholder="Enter staff name here..."
         />
       </div>

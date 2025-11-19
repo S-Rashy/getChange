@@ -16,18 +16,18 @@ export default {
       <div class="w-full flex justify-end mb-5">
         <svg
           @click="closeModal"
-          class="cursor-pointer"
+          class="cursor-pointer text-[#6A7E8A] hover:text-red-500 hover:shadow-lg hover:scale-105 transition-all duration-200"
           width="22"
           height="22"
           viewBox="0 0 22 22"
-          fill="none"
+          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M11 21.7724C17.0751 21.7724 22 17.0173 22 11.1517C22 5.28605 17.0751 0.531006 11 0.531006C4.92487 0.531006 0 5.28605 0 11.1517C0 17.0173 4.92487 21.7724 11 21.7724Z"
-            fill="#6A7E8A"
+            fill="currentColor"
           />
           <path
             d="M14.9284 7.35864L7.07129 14.9448"

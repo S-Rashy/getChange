@@ -41,7 +41,7 @@ export default {
 
 <template>
   <main
-    class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white fixed"
+    class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white fixed  z-[9999]"
   >
     <img src="../../assets/logo.svg" alt="Logo" />
 

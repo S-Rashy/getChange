@@ -10,7 +10,7 @@ import HomeTable from './homeTable.vue';
 </script>
 
 <template>
-    <div>
+    <div class="p-10 ml-60">
         <HomeTable/>
 
     </div>

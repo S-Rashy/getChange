@@ -63,8 +63,8 @@ export default {
       <div
         class="bg-white p-6 rounded-sm shadow-sm w-210 flex justify-between items-center h-14 text-[#013C61]"
       >
-        <div class="flex justify-between items-center w-90 font-semibold">
-          <h6>Store Wallet</h6>
+        <div class="flex gap-35 items-center w-90 font-semibold">
+          <h6 class="w-28">Store Wallet</h6>
           <p class="text-[30px]">₦2,500</p>
         </div>
         <Gbutton class="h-8" @click="topUpModal"> Top up Wallet </Gbutton>
@@ -73,8 +73,8 @@ export default {
       <div
         class="bg-white p-6 rounded-sm shadow-sm w-210 mt-5 flex justify-between items-center h-14 text-[#013C61]"
       >
-        <div class="flex justify-between items-center w-90 font-semibold">
-          <h6>Total Disbursed</h6>
+        <div class="flex gap-35 items-center w-90 font-semibold">
+          <h6 class="w-30">Total Disbursed</h6>
           <p class="text-[30px]">₦12,000</p>
         </div>
         <Wbutton class="" @click="historyModal"> View History </Wbutton>
