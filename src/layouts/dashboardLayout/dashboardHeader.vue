@@ -84,7 +84,7 @@ export default {
         </div>
       </RouterLink>
 
-       <div @click="openModal" class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200">
+       <div @click="openModal" class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200 cursor-pointer">
           <img src="../../assets/logout.svg" alt="" />
           <p>Logout</p>
         </div>
