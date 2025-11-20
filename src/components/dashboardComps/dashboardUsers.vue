@@ -52,6 +52,7 @@ export default {
         <Gbutton>Change </Gbutton>
         <input
           type="text"
+          
           class="border border-[#6A7E8A66] px-4 w-90 outline-none"
           placeholder="Enter staff name here..."
         />

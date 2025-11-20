@@ -12,7 +12,7 @@ export default {
   <div
     class="w-full h-full inset-0 fixed flex items-center justify-center bg-black/30"
   >
-    <div class="bg-white h-59 w-120 py-3 px-12">
+    <div class="bg-white h-59 w-120 py-2 px-12">
       <div class="w-full flex justify-end mb-4">
         <svg
           @click="closeModal"

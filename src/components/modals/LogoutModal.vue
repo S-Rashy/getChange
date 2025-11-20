@@ -1,6 +1,5 @@
 <script>
 import Gbutton from "../slots/GButton.vue";
-import Modal from "../slots/Modal.vue";
 import ShortModal from "../slots/ShortModal.vue";
 import Wbutton from "../slots/WButton.vue";
 export default {

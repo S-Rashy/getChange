@@ -5,10 +5,12 @@ export default {
   components: {
     DeleteModal,
   },
+
   data() {
     return {
       svgColor: "none",
       showModal: false,
+      selectedUser: null,
 
       users: [
         {
@@ -57,14 +59,19 @@ export default {
     };
   },
   methods: {
-    openModal() {
+    openModal(index) {
+      this.selectedUser = index;
       this.showModal = true;
     },
     closeModal() {
       this.showModal = false;
+      this.selectedUser = null; 
     },
-    deleteUser(index){
-      this.users.splice(index, 1)
+    deleteUser(){
+      if(this.selectedUser !== null){
+        this.users.splice(this.selectedUser, 1);
+        this.closeModal();
+      }
 
     },
     changeFill() {
@@ -116,7 +123,7 @@ export default {
         <td>{{ user.role }}</td>
         <td class="rounded-r-md">
           <svg
-            @click="openModal"
+            @click="openModal(index)"
             class="cursor-pointer text-[#6A7E8A] hover:text-gray-700 hover:scale-110 duration-200"
             width="18"
             height="21"
@@ -154,7 +161,7 @@ export default {
       </tr>
     </tbody>
   </table>
-  <DeleteModal v-if="showModal" @delete-user="deleteUser(index)" @close="closeModal" />
+  <DeleteModal v-if="showModal" :user="users[selectedUser]" @delete-user="deleteUser" @close="closeModal" />
 </template>
 
 <style scoped>

@@ -32,10 +32,7 @@ export default {
       this.$emit("send-form", { ...this.newCard });
       this.newCard = { num: "", name: "", date: "" };
     },
-    showError(msg) {
-      this.errorMsg = msg;
-      setTimeout(() => {}, 3000);
-    },
+   
   },
 };
 </script>
@@ -44,6 +41,7 @@ export default {
   <Modal>
     <section class="space-y-4">
       <h4 class="text-[#013C61] text-[24px] font-medium">Add a debit card</h4>
+      
       <form @submit.prevent="sendForm" class="flex flex-col gap-5">
         <input
           type="text"
