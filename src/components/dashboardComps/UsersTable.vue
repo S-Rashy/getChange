@@ -63,6 +63,10 @@ export default {
     closeModal() {
       this.showModal = false;
     },
+    deleteUser(index){
+      this.users.splice(index, 1)
+
+    },
     changeFill() {
       this.svgColor = "#2BDA53";
     },
@@ -83,7 +87,7 @@ export default {
     </thead>
 
     <tbody>
-      <tr v-for="user in users" class="bg-white">
+      <tr v-for="(user, index) in users" :key="index" class="bg-white">
         <td class="rounded-l-md">
           <svg
             @click="changeFill"
@@ -150,7 +154,7 @@ export default {
       </tr>
     </tbody>
   </table>
-  <DeleteModal v-if="showModal" @close="closeModal" />
+  <DeleteModal v-if="showModal" @delete-user="deleteUser(index)" @close="closeModal" />
 </template>
 
 <style scoped>

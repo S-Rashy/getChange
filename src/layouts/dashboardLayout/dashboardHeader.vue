@@ -41,7 +41,7 @@ export default {
 
 <template>
   <main
-    class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white fixed  z-[9999]"
+    class="h-15 w-full flex justify-between items-center px-6 pr-12 bg-white fixed z-[9999]"
   >
     <img src="../../assets/logo.svg" alt="Logo" />
 
@@ -50,18 +50,19 @@ export default {
       <p class="text-[#013C61] font-medium">Hi, {{ userEmail || "User" }}</p>
       <svg
         @click="toggleDropdown"
-        class="cursor-pointer"
+        class="cursor-pointer text-[#013C61] hover:text-[#012E4B] hover:scale-125 transition-transform duration-200"
+        :class="{ 'rotate-180 scale-125': showDropdown }"
         width="10"
         height="6"
         viewBox="0 0 10 6"
-        fill="none"
+        fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M4.99889 5.55556L10 0.00111334L0 0L4.99889 5.55556Z"
-          fill="#013C61"
+          fill="currentColor"
         />
       </svg>
     </div>
@@ -70,7 +71,6 @@ export default {
       class="absolute right-8 mt-55 w-40 py-6 bg-white shadow rounded-lg overflow-hidden z-50 text-[#013C61]"
     >
       <RouterLink to="/history" @click="closeDropdown">
-        
         <div class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200">
           <img src="../../assets/clock.svg" alt="" />
           <p>Wallet History</p>
@@ -78,16 +78,19 @@ export default {
       </RouterLink>
 
       <RouterLink to="/settings" @click="closeDropdown">
-       <div class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200">
+        <div class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200">
           <img src="../../assets/settings.svg" alt="" />
           <p>Settings</p>
         </div>
       </RouterLink>
 
-       <div @click="openModal" class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200 cursor-pointer">
-          <img src="../../assets/logout.svg" alt="" />
-          <p>Logout</p>
-        </div>
+      <div
+        @click="openModal"
+        class="w-full px-4 py-2 flex items-center gap-3 hover:bg-gray-200 cursor-pointer"
+      >
+        <img src="../../assets/logout.svg" alt="" />
+        <p>Logout</p>
+      </div>
     </div>
     <LogoutModal v-if="showModal" @close="closeModal" />
   </main>

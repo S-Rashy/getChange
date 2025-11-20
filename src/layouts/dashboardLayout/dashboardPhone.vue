@@ -31,7 +31,7 @@ export default {
       <p>GETCHANGE WIDGET</p>
       <div class="flex text-[#FFFFFF80]">
         <p class="mt-4">Amount</p>
-        <input type="number" class="border-b border-[#FFFFFF80] w-35 ml-2 mb-1 pl-5 text-[18px] text-white outline-none appearance-none" v-model="amountInput"/>
+        <input type="number" class="border-b border-[#FFFFFF80] w-35 ml-2 mb-1 pl-5 text-[18px] text-white outline-none no-arrow" v-model="amountInput"/>
       </div>
 
       <div class="flex justify-end gap-4 text-[#FFFFFF80]">

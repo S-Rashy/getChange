@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       showModal: false,
-      cards: [{ num: 1234567890123456, name: "Joshua Bakare", date: "03/25" }],
+      cards: [{ num: "1234567890123456", name: "Joshua Bakare", date: "03/25" }],
     };
   },
   methods: {

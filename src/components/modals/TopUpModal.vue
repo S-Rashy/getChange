@@ -57,10 +57,10 @@ import Modal from '../slots/modal.vue';
                 <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
                 <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
                 <input type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
-                <input @change="confirmed" type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
+                <input @input="confirmed" type="text" class="size-8 text-center border border-[#6A7E8A80] rounded-sm">
             </div>
 
-            <p @click="confirmed" class="text-xs text-red-500">Error: code not associated with customer's phone number</p>
+            <p class="text-xs text-red-500">Error: code not associated with customer's phone number</p>
 
     </section>
 

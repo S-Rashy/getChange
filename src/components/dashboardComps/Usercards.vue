@@ -1,37 +1,22 @@
 <script>
 export default {
   name: "userCards",
-  props: { cards: Array },
-  emits: ['delete-card'],
+  props: {
+    cards: { type: Array, required: true, default: () => [] },
+  },
+  emits: ["delete-card"],
   data() {
     return {
-      //   cards: [
-      //     {
-      //       num: 1234567890123456,
-      //       name: "Joshua Bakare",
-      //       date: "03/25",
-      //     },
-      //     {
-      //       num: 1234567890123456,
-      //       name: "Joshua Bakare",
-      //       date: "03/25",
-      //     },
-      //     {
-      //       num: 1234567890123456,
-      //       name: "Joshua Bakare",
-      //       date: "03/25",
-      //     },
-      //   ],
+      
     };
   },
   methods: {
     hideNum(num) {
-      const str = num.toString();
-      return "**** **** **** " + str.slice(-4);
+      return "**** **** **** " + num.slice(-4);
     },
-    deleteCard(index){
-      this.$emit('delete-card', index)
-    }
+    deleteCard(index) {
+      this.$emit("delete-card", index);
+    },
   },
 };
 </script>

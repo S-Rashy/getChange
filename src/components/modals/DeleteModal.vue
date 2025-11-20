@@ -12,6 +12,9 @@ export default {
     closeModal() {
       this.$emit("close");
     },
+    deleteUser(){
+        this.$emit('delete-user', index)
+    }
   },
 };
 </script>
@@ -27,7 +30,7 @@ export default {
 
       <div class="flex justify-center gap-8 items-center">
         <Wbutton @click="closeModal"> No, Cancel</Wbutton>
-        <Gbutton @click=""> Yes, Delete </Gbutton>
+        <Gbutton @click="deleteUser"> Yes, Delete </Gbutton>
       </div>
     </section>
   </ShortModal>
