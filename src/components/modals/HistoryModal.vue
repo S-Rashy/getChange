@@ -1,5 +1,5 @@
 <script>
-import Modal from "../slots/modal.vue";
+import Modal from "../slots/Modal.vue";
 
 export default {
   components: {
@@ -65,7 +65,9 @@ export default {
           <tr v-for="transaction in transactions" :key="transaction.id">
             <td class="text-[#6a7e8a]">{{ transaction.description }}</td>
             <td class="text-[#6a7e8a]">{{ transaction.date }}</td>
-            <td class="text-[#FC001F] bg-[#FC001F1A]" >{{ transaction.status }}</td>
+            <td class="text-[#FC001F] bg-[#FC001F1A]">
+              {{ transaction.status }}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -78,10 +80,8 @@ td {
   padding: 2px;
   margin: 12px 26px;
 }
-table{
-
-    border-collapse: separate;
-    border-spacing: 15px 15px;
-
+table {
+  border-collapse: separate;
+  border-spacing: 15px 15px;
 }
 </style>

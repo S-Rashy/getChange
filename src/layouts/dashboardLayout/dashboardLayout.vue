@@ -1,16 +1,15 @@
 <script>
-import DashboardHeader from "./dashboardHeader.vue";
-import DashboardPhone from "./dashboardPhone.vue";
-import DashboardSidebar from "./dashboardSidebar.vue";
+import DashboardHeader from "./DashboardHeader.vue";
+import DashboardPhone from "./DashboardPhone.vue";
+import DashboardSidebar from "./DashboardSidebar.vue";
 
 export default {
   name: "dashboardLayout",
   components: {
     DashboardHeader,
     DashboardSidebar,
-    DashboardPhone
+    DashboardPhone,
   },
- 
 };
 </script>
 
@@ -22,7 +21,7 @@ export default {
       <DashboardSidebar />
       <div class="pt-15 pl-15">
         <RouterView />
-    </div>
+      </div>
 
       <!-- <button
         @click="logout"

@@ -1,11 +1,11 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
-import Modal from "../slots/modal.vue";
+import Gbutton from "../slots/GButton.vue";
+import Modal from "../slots/Modal.vue";
 
 export default {
   components: {
     Modal,
-    Gbutton
+    Gbutton,
   },
 };
 </script>
@@ -28,17 +28,16 @@ export default {
   </Modal>
 </template>
 
-<style  scoped>
-form input{
-    outline: none;
-    color: #013C61;
-    border-bottom: 1px solid #E6E7EB;
-    padding: 12px 5px;
+<style scoped>
+form input {
+  outline: none;
+  color: #013c61;
+  border-bottom: 1px solid #e6e7eb;
+  padding: 12px 5px;
 }
-::placeholder, label{
-    font-size: 12px;
-    color: #6A7E8A;
+::placeholder,
+label {
+  font-size: 12px;
+  color: #6a7e8a;
 }
 </style>
-
-

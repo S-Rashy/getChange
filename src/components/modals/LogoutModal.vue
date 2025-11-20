@@ -1,8 +1,8 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
-import Modal from "../slots/modal.vue";
+import Gbutton from "../slots/GButton.vue";
+import Modal from "../slots/Modal.vue";
 import ShortModal from "../slots/ShortModal.vue";
-import Wbutton from "../slots/Wbutton.vue";
+import Wbutton from "../slots/WButton.vue";
 export default {
   components: {
     ShortModal,
@@ -13,12 +13,12 @@ export default {
     closeModal() {
       this.$emit("close");
     },
-  
-  logout() {
-    localStorage.removeItem("userData");
-    this.$router.push({ name: "auth-page" });
+
+    logout() {
+      localStorage.removeItem("userData");
+      this.$router.push({ name: "auth-page" });
+    },
   },
-},
 };
 </script>
 
@@ -30,7 +30,7 @@ export default {
       </h4>
 
       <div class="flex justify-center gap-8 items-center">
-        <Wbutton @click="closeModal">  No, Cancel</Wbutton>
+        <Wbutton @click="closeModal"> No, Cancel</Wbutton>
         <Gbutton @click="logout"> Yes, Log out </Gbutton>
       </div>
     </section>

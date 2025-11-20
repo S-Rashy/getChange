@@ -1,11 +1,11 @@
-import Login from "@/components/loginComps/login.vue";
-import Reset from "@/components/resetComps/reset.vue";
-import SignUp from "@/components/signUpComps/signUp.vue";
-import DashboardLayout from "@/layouts/dashboardLayout/dashboardLayout.vue";
-import DashboardHome from "@/components/dashboardComps/dashboardHome.vue";
-import DashboardUsers from "@/components/dashboardComps/dashboardUsers.vue";
-import DashboardWallet from "@/components/dashboardComps/dasboardWallet.vue";
-import AuthLayout from "@/layouts/authLayout/authLayout.vue";
+import Login from "@/components/loginComps/Login.vue";
+import Reset from "@/components/resetComps/Reset.vue";
+import SignUp from "@/components/signUpComps/SignUp.vue";
+import DashboardLayout from "@/layouts/dashboardLayout/DashboardLayout.vue";
+import DashboardHome from "@/components/dashboardComps/DashboardHome.vue";
+import DashboardUsers from "@/components/dashboardComps/DashboardUsers.vue";
+import DashboardWallet from "@/components/dashboardComps/DashboardWallet.vue";
+import AuthLayout from "@/layouts/authLayout/AuthLayout.vue";
 import SettingsLayout from "@/layouts/dashboardLayout/SettingsLayout.vue";
 import Profile from "@/components/SettingsComp/Profile.vue";
 import Password from "@/components/SettingsComp/Password.vue";
@@ -31,11 +31,23 @@ export default [
         name: "SettingsLayout",
         redirect: "/settings/profile",
         children: [
-          { path: "profile", component: Profile,  name: "Profile", },
-          { path: "password", component: Password, name: "Password", },
-          { path: "store-information", component: StoreInfo,  name: "Store-Info" },
-          { path: "billing-information", component: BillingInfo, name: "Billing",  },
-          { path: "invoice-history", component: InvoiceHistory, name: "Invoice",  },
+          { path: "profile", component: Profile, name: "Profile" },
+          { path: "password", component: Password, name: "Password" },
+          {
+            path: "store-information",
+            component: StoreInfo,
+            name: "Store-Info",
+          },
+          {
+            path: "billing-information",
+            component: BillingInfo,
+            name: "Billing",
+          },
+          {
+            path: "invoice-history",
+            component: InvoiceHistory,
+            name: "Invoice",
+          },
         ],
       },
     ],

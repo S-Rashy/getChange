@@ -1,10 +1,10 @@
 <script>
-import Gbutton from '../slots/Gbutton.vue';
+import Gbutton from "../slots/GButton.vue";
 
 export default {
-    components: {
-        Gbutton
-    }
+  components: {
+    Gbutton,
+  },
 };
 </script>
 
@@ -34,13 +34,11 @@ export default {
       <label for="enable" class="">
         Enable <input type="radio" name="enable"
       /></label>
-      <label for="enable">
-        Disable <input type="radio" name="enable"
-      /></label>
+      <label for="enable"> Disable <input type="radio" name="enable" /></label>
     </section>
-     <div class="flex justify-end mt-8">
-          <Gbutton > Save Changes </Gbutton>
-        </div>
+    <div class="flex justify-end mt-8">
+      <Gbutton> Save Changes </Gbutton>
+    </div>
   </main>
 </template>
 

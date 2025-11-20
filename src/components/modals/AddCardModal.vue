@@ -1,6 +1,6 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
-import Modal from "../slots/modal.vue";
+import Gbutton from "../slots/GButton.vue";
+import Modal from "../slots/Modal.vue";
 
 export default {
   components: {

@@ -1,7 +1,7 @@
 <script>
-import AuthFooter from "./authFooter.vue";
-import AuthHeader from "./authHeader.vue";
-import AuthImg from "./authImg.vue";
+import AuthFooter from "./AuthFooter.vue";
+import AuthHeader from "./AuthHeader.vue";
+import AuthImg from "./AuthImg.vue";
 
 export default {
   name: "authLayout",

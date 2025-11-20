@@ -1,10 +1,10 @@
 <script>
-import Gbutton from '../slots/Gbutton.vue';
+import Gbutton from "../slots/GButton.vue";
 
 export default {
   name: "login",
   components: {
-    Gbutton
+    Gbutton,
   },
   data() {
     return {
@@ -72,14 +72,12 @@ export default {
     </section>
 
     <div class="flex justify-between items-center mt-5">
-      <router-link to="/auth/resetPassword" class="text-[#2BDA53] text-[14px] hover:underline"
+      <router-link
+        to="/auth/resetPassword"
+        class="text-[#2BDA53] text-[14px] hover:underline"
         >Forgot Password?</router-link
       >
-      <Gbutton
-        type="submit"
-      >
-        Sign in
-      </Gbutton>
+      <Gbutton type="submit"> Sign in </Gbutton>
     </div>
   </form>
 </template>

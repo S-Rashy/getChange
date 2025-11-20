@@ -1,6 +1,6 @@
 <script>
 import AddCardModal from "../modals/AddCardModal.vue";
-import Gbutton from "../slots/Gbutton.vue";
+import Gbutton from "../slots/GButton.vue";
 import Usercards from "./Usercards.vue";
 
 export default {
@@ -13,7 +13,9 @@ export default {
   data() {
     return {
       showModal: false,
-      cards: [{ num: "1234567890123456", name: "Joshua Bakare", date: "03/25" }],
+      cards: [
+        { num: "1234567890123456", name: "Joshua Bakare", date: "03/25" },
+      ],
     };
   },
   methods: {
@@ -38,7 +40,7 @@ export default {
   <main class="p-12 w-full min-h-full flex gap-25">
     <div class="w-220">
       <h4 class="text-[#013C61] text-[24px] text-semibold">Debit Cards</h4>
-      <Usercards :cards="cards" @delete-card="deleteCard"/>
+      <Usercards :cards="cards" @delete-card="deleteCard" />
     </div>
 
     <Gbutton @click="openModal"> Add New</Gbutton>

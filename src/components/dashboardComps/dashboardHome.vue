@@ -1,9 +1,9 @@
 <script>
-import DashboardPhone from "@/layouts/dashboardLayout/dashboardPhone.vue";
-import Gbutton from "@/components/slots/Gbutton.vue";
-import Wbutton from "@/components/slots/Wbutton.vue";
-import HomeTable from "./homeTable.vue";
-import Modal from "../slots/modal.vue";
+import DashboardPhone from "@/layouts/dashboardLayout/DashboardPhone.vue";
+import Gbutton from "@/components/slots/GButton.vue";
+import Wbutton from "@/components/slots/WButton.vue";
+import HomeTable from "./HomeTable.vue";
+import Modal from "../slots/Modal.vue";
 import TopUpModal from "../modals/TopUpModal.vue";
 import HistoryModal from "../modals/HistoryModal.vue";
 import AirtimeModal from "../modals/AirtimeModal.vue";
@@ -20,7 +20,7 @@ export default {
     TopUpModal,
     HistoryModal,
     AirtimeModal,
-    SettingsLayout
+    SettingsLayout,
   },
   data() {
     return {
@@ -28,12 +28,12 @@ export default {
       showTopUp: false,
       showHistory: false,
       showAirtime: false,
-      amountInput: 0
+      amountInput: 0,
     };
   },
   methods: {
-    saveAmount(amountInput){
-      this.amountInput = amountInput
+    saveAmount(amountInput) {
+      this.amountInput = amountInput;
     },
     topUpModal() {
       this.showModal = true;
@@ -141,7 +141,11 @@ export default {
 
   <HistoryModal v-if="showModal && showHistory" @close="closeModal" />
 
-  <AirtimeModal v-if="showModal && showAirtime" @close="closeModal" :amountInput="amountInput" />
+  <AirtimeModal
+    v-if="showModal && showAirtime"
+    @close="closeModal"
+    :amountInput="amountInput"
+  />
 
   <!-- <SettingsLayout/> -->
 </template>

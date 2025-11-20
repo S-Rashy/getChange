@@ -1,5 +1,5 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
+import Gbutton from "../slots/GButton.vue";
 
 export default {
   name: "Step1",

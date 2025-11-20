@@ -1,7 +1,7 @@
 <script>
-import SignUpHeader from '@/components/signUpComps/signUpHeader.vue';
-import LoginHeader from '@/components/loginComps/loginHeader.vue';
-import ResetHeader from '@/components/resetComps/resetHeader.vue';
+import SignUpHeader from '@/components/signUpComps/SignUpHeader.vue';
+import LoginHeader from '@/components/loginComps/LoginHeader.vue';
+import ResetHeader from '@/components/resetComps/ResetHeader.vue';
     export default {
         name: "signUpHeader", 
         components: {

@@ -1,5 +1,5 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
+import Gbutton from "../slots/GButton.vue";
 
 export default {
   components: {
@@ -15,10 +15,8 @@ export default {
       Click to upload profile
     </div>
 
-    <section class=" h-95 w-120 py-3 px-10">
-      <form
-        class=" flex flex-col gap-2 w-[400px]"
-      >
+    <section class="h-95 w-120 py-3 px-10">
+      <form class="flex flex-col gap-2 w-[400px]">
         <section>
           <div class="flex flex-col text-[#6A7E8A]">
             <label for="firstName">First Name</label>
@@ -67,7 +65,7 @@ export default {
           </div>
         </section>
         <div class="flex justify-end mt-4">
-          <Gbutton > Save Changes </Gbutton>
+          <Gbutton> Save Changes </Gbutton>
         </div>
       </form>
     </section>

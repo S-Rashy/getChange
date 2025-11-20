@@ -1,22 +1,20 @@
-<script >
-import AuthLayout from './layouts/authLayout/authLayout.vue';
-import DashboardLayout from './layouts/dashboardLayout/dashboardLayout.vue';
+<script>
+import AuthLayout from "./layouts/authLayout/AuthLayout.vue";
+import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AuthLayout,
-    DashboardLayout
-  }
+    DashboardLayout,
+  },
 };
 </script>
 
 <template>
-    <!-- <AuthLayout/> -->
-     <!-- <DashboardLayout/> -->
-      <RouterView/>
+  <!-- <AuthLayout/> -->
+  <!-- <DashboardLayout/> -->
+  <RouterView />
 </template>
 
-<style >
-
-</style>
+<style></style>

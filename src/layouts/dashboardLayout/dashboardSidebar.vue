@@ -2,7 +2,7 @@
 import HomeIcon from "../../assets/icons/homeIcon.vue";
 import UsersIcon from "../../assets/icons/usersIcon.vue";
 import CardsIcon from "../../assets/icons/cardsIcon.vue";
-import Gbutton from "@/components/slots/Gbutton.vue";
+import Gbutton from "@/components/slots/GButton.vue";
 export default {
   name: "dashboardSidebar",
   components: {
@@ -24,7 +24,6 @@ export default {
     isActive(path) {
       return this.$route.path === path;
     },
-    
   },
 };
 </script>
@@ -50,7 +49,6 @@ export default {
           />
         </RouterLink>
       </div>
-
     </aside>
   </main>
 </template>

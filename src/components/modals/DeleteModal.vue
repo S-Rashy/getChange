@@ -1,7 +1,7 @@
 <script>
-import Gbutton from "../slots/Gbutton.vue";
+import Gbutton from "../slots/GButton.vue";
 import ShortModal from "../slots/ShortModal.vue";
-import Wbutton from "../slots/Wbutton.vue";
+import Wbutton from "../slots/WButton.vue";
 export default {
   components: {
     ShortModal,
@@ -12,9 +12,9 @@ export default {
     closeModal() {
       this.$emit("close");
     },
-    deleteUser(){
-        this.$emit('delete-user', index)
-    }
+    deleteUser() {
+      this.$emit("delete-user", index);
+    },
   },
 };
 </script>

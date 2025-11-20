@@ -1,11 +1,11 @@
 <script>
-import Gbutton from '../slots/Gbutton.vue';
+import Gbutton from "../slots/GButton.vue";
 
 export default {
   name: "Step2",
   emits: ["nextstep"],
   components: {
-    Gbutton
+    Gbutton,
   },
   methods: {
     handleNextStep() {
@@ -74,11 +74,7 @@ export default {
       </div>
     </section>
     <div class="flex justify-end">
-      <Gbutton
-        @click="handleNextStep"
-      >
-        Finish
-      </Gbutton>
+      <Gbutton @click="handleNextStep"> Finish </Gbutton>
     </div>
   </form>
 </template>

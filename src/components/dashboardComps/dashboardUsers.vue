@@ -1,7 +1,7 @@
 <script>
 import AddNewModal from "../modals/AddNewModal.vue";
-import Gbutton from "../slots/Gbutton.vue";
-import Modal from "../slots/modal.vue";
+import Gbutton from "../slots/GButton.vue";
+import Modal from "../slots/Modal.vue";
 import UsersTable from "./UsersTable.vue";
 
 export default {
@@ -10,8 +10,7 @@ export default {
     Gbutton,
     UsersTable,
     Modal,
-    AddNewModal
-    
+    AddNewModal,
   },
   data() {
     return {
@@ -19,9 +18,8 @@ export default {
     };
   },
   methods: {
-    openModal(){
-    this.showModal = true;
-
+    openModal() {
+      this.showModal = true;
     },
     closeModal() {
       this.showModal = false;
@@ -108,8 +106,7 @@ export default {
 
     <UsersTable />
 
-    
-    <AddNewModal v-if="showModal"  @close="closeModal"/>
+    <AddNewModal v-if="showModal" @close="closeModal" />
   </main>
 </template>
 
