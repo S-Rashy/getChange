@@ -147,7 +147,7 @@ export default {
     :amountInput="amountInput"
   />
 
-  <!-- <SettingsLayout/> -->
+  
 </template>
 
 <style lang="scss" scoped></style>
