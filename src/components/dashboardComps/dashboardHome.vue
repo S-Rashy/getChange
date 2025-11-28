@@ -146,8 +146,6 @@ export default {
     @close="closeModal"
     :amountInput="amountInput"
   />
-
-  
 </template>
 
 <style lang="scss" scoped></style>
